@@ -1,0 +1,40 @@
+units			lj
+boundary		p p p
+atom_style		bond
+special_bonds   	fene
+bond_style      	fene
+pair_style      	lj/cut 2.5
+
+read_data      	100mers.data
+
+mass 			1 1
+
+pair_coeff 		1 1 1.0 1.0 2.5
+bond_coeff     	1 30 1.5 1.0 1.0
+
+
+neighbor        	0.2 bin
+#comm_modify            mode single cutoff 2.0 
+neigh_modify    	delay 0 every 1 check yes
+
+
+compute		1 all msd
+compute		2 all rdf 100 1 1 cutoff 2.5
+compute 		3 all gyration
+compute 		4 all vacf
+
+
+timestep		0.001
+thermo 		100
+thermo_style 		custom step etotal enthalpy vol temp press density c_3[4]
+dump                   MyDump all custom 1000 dump.atom id type x y z vx vy vz 
+
+
+fix 			1 all ave/time 10 5 50 c_1[4] file msd.txt
+fix 			2 all ave/time 1 1 2 c_4[4] file vacf.txt
+fix 			3 all ave/time 10 50 1000 c_2[*] file rdf.txt mode vector
+
+fix 			nvt all nvt temp 1.0 1.0 1		
+run             	1000000
+
+write_data 		100mer_simulated.data
