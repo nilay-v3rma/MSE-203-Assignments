@@ -13,9 +13,9 @@ Wanna see some atoms dance? 🕺💃 Follow these simple steps:
 🏃‍♂️ Steps to Run
 1️⃣ Open your terminal and run:
 ```
-lmp < input_file.in
-(Replace <input_file.in> with the actual input filename.)
+lmp -in input_file.in
 ```
+(Replace <input_file.in> with the actual input filename.)
 
 2️⃣ This will generate a dump file.
 
