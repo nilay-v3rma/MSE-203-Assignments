@@ -1,0 +1,136 @@
+ensemble
+'npt'
+temperature
+1.0d0
+pressure
+1.0d0
+nmolty
+2
+nmolectyp
+13  76
+numboxes
+1
+stepstyle
+'cycles'
+nstep
+10000
+printfreq
+50
+blocksize
+50
+moviefreq
+10
+backupfreq
+1000
+runoutput
+'full'
+pdb_output_freq
+500
+loutlammps
+.true.
+pressure_virial_freq
+50
+pressure_thermo_freq
+50
+pressure_thermo_style
+'move data'
+trmaxdispfreq
+50
+volmaxdispfreq
+50
+linit
+T
+initboxtype
+'dimensions'
+initstyle
+'coords' 'coords'
+initlattice
+'none' 'none'
+initmol
+13  76
+inix iniy iniz
+5  5  5
+hmatrix
+14.0 0d0 0.0d0
+0.0d0  14.0  0.0d0
+0.0d0 0.0d0  14.0
+pm1boxcbswap
+0.0d0
+          pm1cbswmt
+          0.5d0 1.0d0
+pm1boxcomswitch
+1.0d0
+          pm1comswbox
+          1.0d0 
+          pm1comswpair
+          1.0d0 
+pmplane
+0.0d0
+          pmplanebox
+          1.0d0
+          planewidth
+          1.0d0
+pmrow
+0.0d0
+          pmrowbox
+          1.0d0
+          rowwidth
+          1.0d0
+pmtracm
+0.0d0
+          pmtcmt
+          0.5d0 1.0d0
+          rmtrac
+          0.5d0
+          tatrac
+          0.5d0
+ffnumber
+1
+ff_filename
+towhee_ff_ParkHijazi
+classical_potential
+'Embedded Atom Method'       
+interpolatestyle
+'cubicspline'
+rcut
+1.0d0
+electrostatic_form
+'none'
+#copper
+input_style
+'basic connectivity map'
+nunit
+1
+nmaxcbmc
+1
+lpdbnames
+F
+forcefield
+'ParkHijazi'
+charge_assignment
+'manual'
+unit ntype qqatom
+1    'Cu' 0.0d0
+vibration
+0
+improper torsion
+0
+#gold
+input_style
+'basic connectivity map'
+nunit
+1
+nmaxcbmc
+1
+lpdbnames
+F
+forcefield
+'ParkHijazi'
+charge_assignment
+'manual'
+unit ntype qqatom
+1    'Au' 0.0d0
+vibration
+0
+improper torsion
+0
