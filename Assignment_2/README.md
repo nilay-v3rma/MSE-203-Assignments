@@ -1,5 +1,6 @@
 ## 📜 About This Folder
 This folder contains details about the assignment 2.
+This assignment has been completed as a team effort with [HrishiHarsora](https://github.com/HrishiHarsora) and [HarshJamgaonkar0](https://github.com/HarshJamgaonkar0)
 
 ### 🚀 Running the Simulations
 Wanna see some atoms dance? 🕺💃 Follow these simple steps:
